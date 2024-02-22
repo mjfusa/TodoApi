@@ -22,9 +22,13 @@ namespace TodoApi.Controllers
 
         // GET: api/TodoItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
+        public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems(string searchParam =null)
         {
-            return await _context.TodoItems.ToListAsync();
+            if (searchParam == null)
+            {
+                return await _context.TodoItems.ToListAsync();
+            } 
+            return _context.TodoItems.Where(x => x.Name.Contains(searchParam)).ToList();;
         }
 
         // GET: api/TodoItems/5

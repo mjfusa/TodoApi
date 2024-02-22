@@ -4,68 +4,36 @@ info:
   description: A simple to-do list
   version: 1.0.0
 servers:
-  - url: https://c056-2601-204-e782-f580-918a-534a-7410-67b3.ngrok-free.app
+  - url: https://1638-2601-204-e782-f580-918a-534a-7410-67b3.ngrok-free.app/
     description: The todo api server
 paths:
   /api/TodoItems:
     get:
-      tags:
-        - TodoItems
-      responses:
-        '200':
-          description: Success
-          content:
-            text/plain:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/TodoItem'
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/TodoItem'
-            text/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/TodoItem'
-
-  /api/TodoItems/{id}:
-    get:
-      tags:
-        - TodoItems
+      operationId: TodoItems
+      summary: Returns a list of to-do items
+      description: Returns a list of to-do items
       parameters:
-        - name: id
-          in: path
-          required: true
+        - name: searchParam
+          in: query
+          description: To do item name to search for
           schema:
-            type: integer
-            format: int64
+            type: string
+          required: false
       responses:
         '200':
-          description: Success
+          description: A list of to do items
           content:
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/TodoItem'
             application/json:
               schema:
-                $ref: '#/components/schemas/TodoItem'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/TodoItem'
-components:
-  schemas:
-    TodoItem:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type: string
-          nullable: true
-        isComplete:
-          type: boolean
-      additionalProperties: false
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                      description: The unique identifier of the to-do item
+                    name:
+                      type: string
+                      description: The name of the to-do item
+                    isComplete:
+                      type: boolean
+                      description: The status of the to-do item
