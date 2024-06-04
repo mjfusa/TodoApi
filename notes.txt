@@ -4,3 +4,4 @@ c:\users\mikefra\ngrok http http://localhost:5092 --domain patient-magpie-destin
 Get started API plugin
 https://learn.microsoft.com/en-us/copilot/plugins/get-started?source=recommendations
 
+ https://learn.microsoft.com/en-us/azure/app-service/tutorial-connect-msi-sql-database?tabs=windowsclient%2Cefcore%2Cdotnetcore

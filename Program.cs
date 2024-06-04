@@ -13,13 +13,25 @@ builder.Services.AddCors(options =>
                       });
 });
 
+
+var connection = String.Empty;
+if (builder.Environment.IsDevelopment())
+{
+    builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.Development.json");
+    connection = builder.Configuration.GetConnectionString("MyDbConnection");
+}
+else
+{
+    connection = Environment.GetEnvironmentVariable("MyDbConnection");
+}
+
 // Add services to the container.
 
 builder.Services.AddControllers();
+//   builder.Services.AddDbContext<TodoContext>(opt =>
+//       opt.UseInMemoryDatabase("TodoList"));
   builder.Services.AddDbContext<TodoContext>(opt =>
-      opt.UseInMemoryDatabase("TodoList"));
-//  builder.Services.AddDbContext<TodoContext>(opt =>
-//      opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+      opt.UseSqlServer(connection));
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
