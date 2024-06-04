@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - mjfTodo
 on:
   push:
     branches:
-      - master
+      - azureSql
   workflow_dispatch:
 
 jobs:
