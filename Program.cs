@@ -18,11 +18,11 @@ var connection = String.Empty;
 if (builder.Environment.IsDevelopment())
 {
     builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.Development.json");
-    connection = builder.Configuration.GetConnectionString("MyDbConnection");
+    connection = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
 }
 else
 {
-    connection = Environment.GetEnvironmentVariable("MyDbConnection");
+    connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
 }
 
 // Add services to the container.
