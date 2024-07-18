@@ -9,3 +9,5 @@ https://learn.microsoft.com/en-us/copilot/plugins/get-started?source=recommendat
  To Create database:
  https://learn.microsoft.com/en-us/azure/azure-sql/database/azure-sql-dotnet-entity-framework-core-quickstart?view=azuresql&tabs=dotnet-cli%2Cservice-connector%2Cportal
  
+To connect user managed identity to web app to azure sql
+https://learn.microsoft.com/en-us/azure/app-service/tutorial-connect-msi-azure-database?tabs=sqldatabase-sc%2Cuserassigned-sc%2Cdotnet%2Cdotnet-mysql-mi%2Cdotnet-postgres-mi%2Cvscode#code-try-0
