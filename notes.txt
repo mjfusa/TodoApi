@@ -11,3 +11,8 @@ https://learn.microsoft.com/en-us/copilot/plugins/get-started?source=recommendat
  
 To connect user managed identity to web app to azure sql
 https://learn.microsoft.com/en-us/azure/app-service/tutorial-connect-msi-azure-database?tabs=sqldatabase-sc%2Cuserassigned-sc%2Cdotnet%2Cdotnet-mysql-mi%2Cdotnet-postgres-mi%2Cvscode#code-try-0
+
+Test links:
+https://todoapi101.azurewebsites.net/logo.png
+https://todoapi101.azurewebsites.net/api/todoitems
+
