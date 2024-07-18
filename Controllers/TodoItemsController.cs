@@ -10,6 +10,41 @@ using TodoApi.Models;
 namespace TodoApi.Controllers
 {
 
+    [Route("logo.png")]
+    public class LogoController : ControllerBase
+    {
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var file = System.IO.File.OpenText("logo.png");
+            return File(file.BaseStream, "image/png");
+        }
+
+    }
+       [Route(".well-known/ai-plugin.json")]
+    public class AiPluginController : ControllerBase
+    {
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var file = System.IO.File.OpenText("ai-plugin.json");
+            return File(file.BaseStream, "application/json");
+        }
+
+    }
+
+    [Route("openapi.yaml")]
+    public class OpenApiYamlController : ControllerBase
+    {
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var file = System.IO.File.OpenText("openapi.yaml");
+            return File(file.BaseStream, "application/yaml");
+        }
+    }
+
     [Route("api/TodoItems")]
     [ApiController]
     public class TodoItemsController : ControllerBase

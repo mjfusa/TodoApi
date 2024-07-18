@@ -1,0 +1,18 @@
+NGrok cmd line:
+c:\users\mikefra\ngrok http http://localhost:5092 --domain patient-magpie-destined.ngrok-free.app
+
+Get started API plugin
+https://learn.microsoft.com/en-us/copilot/plugins/get-started?source=recommendations
+
+ https://learn.microsoft.com/en-us/azure/app-service/tutorial-connect-msi-sql-database?tabs=windowsclient%2Cefcore%2Cdotnetcore
+
+ To Create database:
+ https://learn.microsoft.com/en-us/azure/azure-sql/database/azure-sql-dotnet-entity-framework-core-quickstart?view=azuresql&tabs=dotnet-cli%2Cservice-connector%2Cportal
+ 
+To connect user managed identity to web app to azure sql
+https://learn.microsoft.com/en-us/azure/app-service/tutorial-connect-msi-azure-database?tabs=sqldatabase-sc%2Cuserassigned-sc%2Cdotnet%2Cdotnet-mysql-mi%2Cdotnet-postgres-mi%2Cvscode#code-try-0
+
+Test links:
+https://todoapi101.azurewebsites.net/logo.png
+https://todoapi101.azurewebsites.net/api/todoitems
+
